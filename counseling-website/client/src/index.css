@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles below */
+@layer base {
+  body {
+    @apply font-sans text-gray-800;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+}
+
+:root {
+  font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  color: #213547;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Fix navbar styling */
+header a, header button {
+  color: white;
+}
+
+/* Ensure full width containers */
+.w-full {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Add transition effects */
+a, button {
+  transition: all 0.3s ease;
+}
+
+/* Fix image rendering */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Ensure footer stays at bottom */
+.min-h-screen {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Responsive font sizes for very large screens */
+@media (min-width: 1920px) {
+  :root {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 2560px) {
+  :root {
+    font-size: 20px;
+  }
+}
+
+/* Ensure sections fill full width on large screens */
+section {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Ensure proper scaling */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Override App.css container limitations */
+#root {
+  max-width: 100% !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+/* Responsive padding for different screen sizes */
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
